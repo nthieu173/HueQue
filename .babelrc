@@ -1,0 +1,22 @@
+{
+  "presets": [["env", {"modules": false}], "react-app"],
+  "plugins": [
+    "syntax-dynamic-import",
+    [
+      "transform-imports", {
+        "react-router-dom": {
+          "transform": "react-router-dom/es/${member}",
+          "preventFullImport": true
+        },
+        "material-ui": {
+          "transform": "material-ui/${member}",
+          "preventFullImport": true
+        },
+        "lodash": {
+          "transform": "lodash/${member}",
+          "preventFullImport": true
+        }
+      }
+    ]
+  ]
+}

@@ -1,0 +1,46 @@
+{
+  "name": "react-pwa-guide-kit",
+  "version": "1.0.0",
+  "description": "Progressive Web App with React.js",
+  "author": "ragingwind",
+  "license": "MIT",
+  "scripts": {
+    "start": "webpack-dev-server --https",
+    "prestart": "opn https://0.0.0.0:8080 -- 'google-chrome-beta' --incognito --ignore-certificate-errors --unsafely-treat-insecure-origin-as-secure=https://0.0.0.0:8080",
+    "build": "rm -rf build && webpack --env.production",
+    "build:debug": "rm -rf build && webpack",
+    "deploy": "npm run build && firebase deploy",
+    "analyze": "webpack --env.production --profile --json > ./node_modules/.bundle-data.json && webpack-bundle-analyzer ./node_modules/.bundle-data.json"
+  },
+  "dependencies": {
+    "ejs": "^2.5.7",
+    "firebase": "^4.8.0",
+    "material-ui": "^0.19.2",
+    "opn": "^5.4.0",
+    "react": "^15.6.1",
+    "react-dom": "^15.6.1",
+    "react-lite": "^0.15.38",
+    "react-router-dom": "4.2.2",
+    "react-tap-event-plugin": "^2.0.1"
+  },
+  "devDependencies": {
+    "@types/react": "^16.4.18",
+    "babel-core": "^6.26.0",
+    "babel-loader": "^7.1.2",
+    "babel-plugin-syntax-dynamic-import": "^6.18.0",
+    "babel-plugin-transform-imports": "^1.4.1",
+    "babel-preset-env": "^1.6.0",
+    "babel-preset-react-app": "^3.0.2",
+    "copy-webpack-plugin": "^4.0.1",
+    "dotenv-safe": "^4.0.4",
+    "html-webpack-plugin": "^2.30.1",
+    "inline-chunk-manifest-html-webpack-plugin": "^1.1.1",
+    "opn-cli": "^3.1.0",
+    "preload-webpack-plugin": "^2.0.0",
+    "sw-precache": "^5.2.0",
+    "sw-precache-webpack-plugin-loader": "^1.0.2",
+    "webpack": "^3.6.0",
+    "webpack-bundle-analyzer": "^2.9.0",
+    "webpack-dev-server": "^2.8.2"
+  }
+}
