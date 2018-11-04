@@ -6,7 +6,7 @@
   "license": "MIT",
   "scripts": {
     "start": "webpack-dev-server --https",
-    "prestart": "opn https://0.0.0.0:8080 -- 'google-chrome-beta' --incognito --ignore-certificate-errors --unsafely-treat-insecure-origin-as-secure=https://0.0.0.0:8080",
+    "prestart": "opn https://0.0.0.0:3000 -- 'google-chrome-beta' --incognito --ignore-certificate-errors --unsafely-treat-insecure-origin-as-secure=https://0.0.0.0:8080",
     "build": "rm -rf build && webpack --env.production",
     "build:debug": "rm -rf build && webpack",
     "deploy": "npm run build && firebase deploy",
@@ -14,7 +14,7 @@
   },
   "dependencies": {
     "ejs": "^2.5.7",
-    "firebase": "^4.8.0",
+    "firebase": "^5.5.7",
     "material-ui": "^0.19.2",
     "opn": "^5.4.0",
     "react": "^15.6.1",

@@ -124,7 +124,7 @@ module.exports = ({production = false, ssr = false, lite = false} = {}) => {
       contentBase: './public',
       inline: true,
       host: 'localhost',
-      port: 8080
+      port: 3000
     }
   };
 
